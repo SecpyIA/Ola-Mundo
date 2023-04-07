@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04</title>
+    <style>
+        /* Efeito degradê na página*/
+        body {
+            background: linear-gradient(to top, #442444, #1e4949);
+            /*método degradê*/
+            color: rgb(255, 193, 247);
+            font: normal 20pt arial;
+            height: 100vh;
+        }
+
+        /* Efeito degradê no título */
+        h1 {
+            background: linear-gradient(to right, #ff00ff, #00ffff);
+            /*método degradê*/
+            -webkit-background-clip: text;
+            background-clip: text;
+            /*o fundo recorta envolta do texto*/
+            -webkit-text-fill-color: transparent;
+            /*A cor primária do texto some mostrando o fundo*/
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <H1>Olá Mundo!</H1> <!-- Título -->
+    <script>
+        // Alertas e notificações no navegador dentro de variáveis
+        var nome = prompt("Qual é seu nome?")
+        var idade = Number.parseInt(prompt(`Olá ${nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase()}, quantos anos tem?`))
+        var n1 = Number(prompt("Digite um número:"))
+        var n2 = Number(prompt("Digite outro número:"))
+        var s = n1 + n2 
+        var dinheiro = Number(prompt("qual é o seu salário?"))
+        document.write(`<H2>Já te livrei da maldição!!!</H2>`) // Texto HTML dentro do JavaScript
+        document.write(`<p>É um grande prazer em te conhecer <strong>${nome.toUpperCase()}</strong>!</p>`) // Texto HTML com códigos JS
+        document.write(`Seu nome tem ` + nome.length + ` letras.</br>`) // + [é um tipo de concatenação]
+        document.write(`Idade: ${idade}</br>`)
+        document.write(`A soma dos números ${n1} e ${n2} é igual a ${s}<br/>`)
+        // V código para converter em moeda real V
+        document.write(`Seu salário é: ${dinheiro.toLocaleString( "pt-BR", {style: "currency", currency: "BRL"})}<br/>`)
+        document.write(`<p>Seu nome com a primeira letra maiúscula: ${nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase()}</p>`)
+        if (idade <18) {document.write("Você é novo ")} else {document.write("Você é adulto ")}
+        if (dinheiro >= 2500) {document.write("e rico ")} else {document.write("e pobre ")}
+        if (dinheiro >= 2500) {document.write("^^<br/>")} else {document.write(";-;<br/>")}
+    </script>
+</body>
+
+</html>
